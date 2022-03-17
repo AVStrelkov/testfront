@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>myVue</title>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+            Наведи на меня курсор
+        </span>
+    </div>
+    <div id="app-3">
+        <span v-if="seen">Сейчас true</span>
+        <span v-else="seen">Сейчас false</span>
+    </div>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="rewersMessage">Перепернуть</button>
+    </div>
+    <div id="app-6">
+        <p>{{message}}</p>
+        <input type="text" v-model="message">
+    </div>
+    <div id="app-7">
+        <ol>
+            <todo-item
+                v-for="item in groseryList"
+                v-bind:todo="item"
+            ></todo-item>
+            
+        
+
+        </ol>
+    </div>
+
+    <button id="load">загрузить</button>
+    <div id="result"></div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

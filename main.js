@@ -73,7 +73,7 @@ const res = document.querySelector('#result');
 load.addEventListener('click', () =>{
     
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://dev.rusdat.net/api/test/profiles');
+    xhr.open('GET', 'dev.rusdat.net/api/test/profiles');
     xhr.send();
     xhr.addEventListener('load', () => {
         console.log(xhr);
